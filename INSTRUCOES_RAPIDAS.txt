@@ -1,0 +1,48 @@
+INSTRUÇÕES RÁPIDAS PARA DEPLOY
+
+OPÇÃO 1 - RAILWAY (RECOMENDADO):
+1. Acesse railway.app
+2. Login com GitHub
+3. "New Project" → "Deploy from GitHub"
+4. Selecione seu repositório
+5. Adicione MySQL Database
+6. Configure variáveis de ambiente
+7. Deploy automático
+
+OPÇÃO 2 - HEROKU:
+1. Instale Heroku CLI
+2. heroku create seu-app
+3. heroku addons:create cleardb:ignite
+4. Configure variáveis
+5. git push heroku main
+
+VARIÁVEIS DE AMBIENTE NECESSÁRIAS:
+APP_NAME="Instituto Politécnico 30 de Setembro"
+APP_ENV=production
+APP_KEY=
+APP_DEBUG=false
+APP_URL=https://seu-dominio.com
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=setembro30
+DB_USERNAME=root
+DB_PASSWORD=
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=seu-email@gmail.com
+MAIL_PASSWORD=sua-senha-de-app
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=seu-email@gmail.com
+
+COMANDOS DE INSTALAÇÃO:
+composer install --optimize-autoloader --no-dev
+php artisan key:generate
+php artisan migrate --force
+php artisan storage:link
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
+
+STATUS: PROJETO PRONTO PARA PRODUÇÃO! ✅ 

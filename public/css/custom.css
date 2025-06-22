@@ -1,0 +1,69 @@
+.carousel .carousel-item {
+  transition: all 1s ease-in-out;
+
+}
+
+.carousel-slider .sobre-carousel .carousel-item img{
+   width: 400px !important;
+   height: 400px !important;
+   object-fit: cover;
+}
+
+.carousel-slider img {
+  max-height: 400px;
+   object-fit: cover;
+   
+}
+.bloco{
+   height: 100px;
+}
+.forum-card {
+  height: 150px;
+  transition: transform 0.3s ease;
+}
+.forum-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+nav .brand-logo {
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+nav .brand-logo:hover {
+  color: #ffeb3b;
+}
+.card {
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+.btn, .btn-large {
+  transition: all 0.3s ease;
+}
+.btn:hover, .btn-large:hover {
+  box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
+}
+
+
+/* Animação de fade-in para seções */
+.animated-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.animated-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media only screen and (max-width: 992px) {
+  nav.brand-logo {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .bloco{
+    height:178px;
+    background-color: blue;
+ }
+}

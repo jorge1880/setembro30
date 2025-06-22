@@ -1,0 +1,37 @@
+# CONFIGURAÇÃO UNIVERSAL DE EMAIL (Para hospedagem)
+# Funciona com qualquer provedor: Gmail, Outlook, Yahoo, etc.
+
+# OPÇÃO 1: SENDGRID (Recomendado)
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.sendgrid.net
+MAIL_PORT=587
+MAIL_USERNAME=apikey
+MAIL_PASSWORD=SUA_API_KEY_SENDGRID
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=noreply@seudominio.com
+MAIL_FROM_NAME="Sistema Setembro 30"
+
+# OPÇÃO 2: MAILGUN
+# MAIL_MAILER=smtp
+# MAIL_HOST=smtp.mailgun.org
+# MAIL_PORT=587
+# MAIL_USERNAME=postmaster@seudominio.com
+# MAIL_PASSWORD=SUA_SENHA_MAILGUN
+# MAIL_ENCRYPTION=tls
+# MAIL_FROM_ADDRESS=noreply@seudominio.com
+# MAIL_FROM_NAME="Sistema Setembro 30"
+
+# OPÇÃO 3: GMAIL (Para desenvolvimento)
+# MAIL_MAILER=smtp
+# MAIL_HOST=smtp.gmail.com
+# MAIL_PORT=587
+# MAIL_USERNAME=seu_email@gmail.com
+# MAIL_PASSWORD=sua_senha_de_app
+# MAIL_ENCRYPTION=tls
+# MAIL_FROM_ADDRESS=seu_email@gmail.com
+# MAIL_FROM_NAME="Sistema Setembro 30"
+
+# INSTRUÇÕES:
+# 1. Para produção: Use SendGrid ou Mailgun
+# 2. Para desenvolvimento: Use Gmail
+# 3. O email será enviado para QUALQUER provedor válido 

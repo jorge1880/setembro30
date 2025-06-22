@@ -1,0 +1,36 @@
+# Arquivos de texto
+*.php text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.blade.php text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Arquivos binários
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.tar.gz binary
+
+# Arquivos de configuração
+.env.example text eol=lf
+.env text eol=lf
+
+# Arquivos do Laravel
+storage/logs/* text eol=lf
+storage/framework/cache/* text eol=lf
+storage/framework/sessions/* text eol=lf
+storage/framework/views/* text eol=lf
+
+# Arquivos de documentação
+README.md text eol=lf
+CHANGELOG.md text eol=lf
+LICENSE text eol=lf

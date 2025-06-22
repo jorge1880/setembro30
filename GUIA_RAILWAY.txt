@@ -1,0 +1,70 @@
+DEPLOY NO RAILWAY - Instituto Politécnico 30 de Setembro
+
+PRÉ-REQUISITOS:
+- Conta no GitHub (gratuita)
+- Conta no Railway (gratuita)
+- Projeto já está no GitHub
+
+PASSO A PASSO:
+
+1. PREPARAR O PROJETO:
+   git add .
+   git commit -m "Projeto pronto para produção"
+   git push origin main
+
+2. CONECTAR AO RAILWAY:
+   - Acesse railway.app
+   - Faça login com GitHub
+   - Clique em "New Project"
+   - Selecione "Deploy from GitHub repo"
+   - Escolha seu repositório
+
+3. CONFIGURAR VARIÁVEIS DE AMBIENTE:
+   No Railway, vá em "Variables" e adicione:
+   
+   APP_NAME="Instituto Politécnico 30 de Setembro"
+   APP_ENV=production
+   APP_KEY=
+   APP_DEBUG=false
+   APP_URL=https://seu-app.railway.app
+   
+   DB_CONNECTION=mysql
+   DB_HOST=seu-host-mysql.railway.app
+   DB_PORT=3306
+   DB_DATABASE=railway
+   DB_USERNAME=root
+   DB_PASSWORD=sua-senha-mysql
+   
+   MAIL_MAILER=smtp
+   MAIL_HOST=smtp.gmail.com
+   MAIL_PORT=587
+   MAIL_USERNAME=seu-email@gmail.com
+   MAIL_PASSWORD=sua-senha-de-app
+   MAIL_ENCRYPTION=tls
+   MAIL_FROM_ADDRESS=seu-email@gmail.com
+
+4. ADICIONAR BANCO MYSQL:
+   - No Railway, clique em "New"
+   - Selecione "Database" → "MySQL"
+   - Aguarde a criação
+   - Copie as credenciais para o .env
+
+5. CONFIGURAR BUILD COMMANDS:
+   Build Command: composer install --optimize-autoloader --no-dev
+   
+   Start Command: php artisan key:generate && php artisan migrate --force && php artisan storage:link && php artisan config:cache && php artisan route:cache && php artisan view:cache && php -S 0.0.0.0:$PORT -t public
+
+6. DEPLOY:
+   - Clique em "Deploy Now"
+   - Aguarde o build completar
+   - Acesse a URL gerada
+
+VERIFICAÇÕES PÓS-DEPLOY:
+- Site acessível
+- Login funcionando
+- Recuperação de senha funcionando
+- Upload de imagens funcionando
+
+CUSTOS:
+- Gratuito: 500 horas/mês
+- Pago: $5/mês para mais recursos 

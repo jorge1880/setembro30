@@ -1,0 +1,26 @@
+# CONFIGURAÇÃO MANUAL GMAIL SMTP
+# Copie estas linhas para o seu arquivo .env
+
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=SEU_EMAIL@gmail.com
+MAIL_PASSWORD=SUA_SENHA_DE_APP
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS=SEU_EMAIL@gmail.com
+MAIL_FROM_NAME="Sistema Setembro 30"
+
+# SUBSTITUA:
+# SEU_EMAIL@gmail.com = seu email Gmail real
+# SUA_SENHA_DE_APP = senha de app gerada no Google
+
+# EXEMPLO:
+# MAIL_USERNAME=joao.silva@gmail.com
+# MAIL_PASSWORD=abcd efgh ijkl mnop
+
+# INSTRUÇÕES:
+# 1. Ative verificação em 2 etapas: https://myaccount.google.com/security
+# 2. Gere senha de app: https://myaccount.google.com/apppasswords
+# 3. Substitua as informações acima
+# 4. Salve o arquivo .env
+# 5. Teste a recuperação de senha 

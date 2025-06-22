@@ -1,0 +1,87 @@
+# Regras de Desenvolvimento Laravel - Instituto 30 de Setembro
+
+## Padrões de Código
+- Sempre use namespaces completos do Laravel
+- Siga PSR-4 para autoloading de classes
+- Use Eloquent ORM para todas as queries de banco
+- Implemente validação com Form Requests
+- Use Policies para autorização de acesso
+- Siga as convenções de nomenclatura do Laravel
+- Use migrations para todas as mudanças no banco de dados
+- Implemente testes quando possível
+
+## Estrutura de Arquivos
+- Controllers em app/Http/Controllers/
+- Models em app/Models/
+- Views em resources/views/
+- Migrations em database/migrations/
+- Seeders em database/seeders/
+- Policies em app/Policies/
+- Requests em app/Http/Requests/
+
+## Convenções de Nomenclatura
+- Controllers: PascalCase + Controller (ex: UserController)
+- Models: PascalCase singular (ex: User)
+- Migrations: snake_case com timestamp (ex: create_users_table)
+- Views: kebab-case (ex: user-profile.blade.php)
+- Routes: kebab-case (ex: user-profile)
+
+## Padrões de Banco de Dados
+- Tabelas: plural, snake_case (ex: users, user_profiles)
+- Colunas: snake_case (ex: first_name, created_at)
+- Chaves estrangeiras: singular_tabela_id (ex: user_id)
+- Timestamps: created_at, updated_at
+
+## Segurança
+- Sempre validar inputs do usuário
+- Usar CSRF protection em formulários
+- Implementar autenticação adequada
+- Sanitizar dados antes de exibir
+- Usar prepared statements (Eloquent faz isso automaticamente)
+
+## Performance
+- Usar eager loading para evitar N+1 queries
+- Implementar cache quando apropriado
+- Otimizar queries complexas
+- Usar paginação para listas grandes
+
+## Frontend
+- Usar Blade templates para views
+- Implementar responsividade
+- Usar CSS/JS organizados
+- Seguir padrões de acessibilidade
+
+## API (se aplicável)
+- Usar Resource classes para formatação
+- Implementar versionamento
+- Usar status codes HTTP apropriados
+- Documentar endpoints
+
+## Debugging
+- Usar Laravel Debugbar em desenvolvimento
+- Implementar logging adequado
+- Usar dd() e dump() para debug
+- Verificar logs em storage/logs/
+
+## Deploy
+- Configurar variáveis de ambiente
+- Otimizar para produção (cache, debug off)
+- Configurar banco de dados de produção
+- Implementar backup automático
+
+## Contexto do Projeto
+Este é um sistema de gestão escolar para o Instituto 30 de Setembro.
+- Usuários: diretor_geral, professor, aluno
+- Funcionalidades: gestão de cursos, turmas, disciplinas, aulas, materiais
+- Interface: dashboard administrativo, área do professor, área do aluno
+- Tecnologias: Laravel 9, MySQL, Blade, Materialize CSS
+
+## Comandos Úteis
+- php artisan make:controller NomeController --resource
+- php artisan make:model NomeModel -m
+- php artisan make:policy NomePolicy --model=NomeModel
+- php artisan make:request NomeRequest
+- php artisan migrate:fresh --seed
+- php artisan config:cache
+- php artisan route:cache
+- php artisan view:cache
